@@ -12,28 +12,53 @@ namespace Övn2FlowControl
         {
             Console.WriteLine("Välkommen till hvudmenyn!");
             Console.WriteLine("Härifrån kommer du att använda siffror för att navigera vidare och testa olika funktioner ");
-            //Console.WriteLine(GetChoise(0));
+            Console.WriteLine("Menyval 0) Avsluta program ");
+            Console.WriteLine("Menyval 1) Bio biljetter");
+            Console.WriteLine("Menyval 2) Upprepa tio gånger");
+            Console.WriteLine("Menyval 3) Det tredje ordet");
+            string result = Console.ReadLine();
 
-            static string GetChoise (int ChoiseNum)
+        }
+        static string GetChoise (int ChoiseNum)
+        { 
+            string ChoiseName;
+
+            switch (ChoiseNum)
             {
-                string ChoiseName;
+                case 0:
+                    ChoiseName = "Exit";
+                    break;
 
-                switch (ChoiseNum)
-                {
-                    case 0:
-                        ChoiseName = "Exit";
-                        break;
-                  
-                    default:
-                        ChoiseName = "Felaktig input";
-                        break;
+                case 1:
+                    ChoiseName = "bio biljetter";
+                    break;
 
-                }
-                return ChoiseName;
+                case 2:
+                    ChoiseName = "Upprepa tio gånger";
+                    break;
+
+                case 3:
+                    ChoiseName = "Det tredje ordet";
+                    break;
+
+
+                default:
+                    ChoiseName = "Felaktig input";
+                    break;
+
+
             }
-
-            
-            Console.ReadLine();
+                return ChoiseName;
         }
     }
 }
+
+             /*int num01 = 0;
+             while (num01 < 10)
+             {
+                 Console.WriteLine("loop nr " + num01);
+                 num01++;
+             }
+            */
+
+//Console.WriteLine(GetChoise(0));
